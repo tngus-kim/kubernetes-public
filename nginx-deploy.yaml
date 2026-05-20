@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: nginx-app-deploy
 spec:
-  replicas: 2
+  replicas: 6
   selector:
     matchLabels:
       app: nginx-app
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx-app
-        image: kimsuhyeon2/nginxweb:v1.0
+        image: kimsuhyeon2/nginxweb:v2.0
         ports:
         - containerPort: 80
         resources:
